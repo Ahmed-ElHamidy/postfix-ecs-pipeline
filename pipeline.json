@@ -3,6 +3,7 @@
   "processors": [
     {
       "grok": {
+        "pattern_definitions": {
   "STATUS_WORD": """[\w-]*""",
   "SYSLOG_PREFIX": """%{SYSLOGTIMESTAMP:@timestamp} %{SYSLOGHOST:host.name} %{PROG:process.name}(?:\[%{POSINT:process.pid}\])?:""",
   "POSTFIX_QUEUEID": "([0-9A-F]{6,}|[0-9a-zA-Z]{12,})|NOQUEUE",
